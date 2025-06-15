@@ -1,0 +1,23 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import Logo from "../assets/logo.svg";
+import { Image } from "astro:assets";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main id="home">
+      <Image src={Logo} alt="the cli company logo" id="main_logo" />
+      <div></div>
+    </main>
+    <Footer />
+  </body>
+</html>
